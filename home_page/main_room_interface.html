@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwitter Home</title>
+    <link rel="stylesheet" href="main_room_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="body1">
+    <center>
+        <h1 style="color: aquamarine;">Kwitter Rooms</h1>
+    </center>
+    <br>
+    <img src="img_avatar.png" class="avatar1" style="margin-left: 5px;"><span
+        style="margin-left: 10px;font-size: 30px;"><b><span id="user_name_display">Name</span></b><button
+            class="btn btn-primary" style="margin-left: 10px;" onclick="logout()">Logout</button></span>
+    <br><br>
+    <center>
+        <div style="width: 850px;">
+            <input type="text" class="form-control" placeholder="Enter Room Name" id="roomName"><br>
+            <button class="btn btn-success" onclick="addRoom()">Add Room</button>
+
+        </div>
+        <br>
+        <div id="output"
+            style="padding: 10px; width:80%;background: rgb(38, 146, 141);border-radius: 15px;box-shadow: 10px 10px 8px #888888;">
+            <h1>Rooms</h1>
+            <hr>
+        </div>
+    </center>
+    <!-- Links Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <!-- Configuration Firebase-->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDtmSQrMB2R49YDWbsITeLz_fTOgGska7M",
+            authDomain: "kwitter-project-f3259.firebaseapp.com",
+            projectId: "kwitter-project-f3259",
+            storageBucket: "kwitter-project-f3259.appspot.com",
+            messagingSenderId: "525195912178",
+            appId: "1:525195912178:web:db700e8fa5c61311ae816b",
+            measurementId: "G-21W082DZNF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="main_room_code.js"></script>
+</body>
+
+</html>
